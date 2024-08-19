@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <body class="bg-background text-foreground">
+  
+  <nav class="bg-primary text-primary-foreground p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-lg font-bold">BrandName</a>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="hover:text-primary-foreground/80">Home</a></li>
+        <li><a href="#" class="hover:text-primary-foreground/80">About</a></li>
+        <li><a href="#" class="hover:text-primary-foreground/80">Services</a></li>
+        <li><a href="#" class="hover:text-primary-foreground/80">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section class="bg-primary text-primary-foreground py-16 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Welcome to BrandName</h1>
+      <p class="text-lg mb-8">We provide top-notch services to meet your needs.</p>
+      <a href="#contact" class="bg-secondary text-secondary-foreground px-6 py-3 rounded-lg hover:bg-secondary/80">Get in Touch</a>
+    </div>
+  </section>
+  
+  <section class="px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4 text-center">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-card p-4 rounded-lg text-center">
+        <img src="https://placehold.co/100" alt="service-1" class="mx-auto mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Service One</h3>
+        <p class="text-sm text-muted-foreground">Description of service one.</p>
+      </div>
+      <div class="bg-card p-4 rounded-lg text-center">
+        <img src="https://placehold.co/100" alt="service-2" class="mx-auto mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Service Two</h3>
+        <p class="text-sm text-muted-foreground">Description of service two.</p>
+      </div>
+      <div class="bg-card p-4 rounded-lg text-center">
+        <img src="https://placehold.co/100" alt="service-3" class="mx-auto mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Service Three</h3>
+        <p class="text-sm text-muted-foreground">Description of service three.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4">Testimonials</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-card p-4 rounded-lg">
+        <img src="https://placehold.co/300" alt="testimonial-1" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Amazing Service!</h3>
+        <p class="text-sm text-muted-foreground">The team delivered exceptional results on our project. Highly recommended!</p>
+      </div>
+      <div class="bg-card p-4 rounded-lg">
+        <img src="https://placehold.co/300" alt="testimonial-2" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Professional Work</h3>
+        <p class="text-sm text-muted-foreground">Their attention to detail and expertise in concrete work is unmatched. Great job!</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="px-4 py-8 text-center">
+    <h2 class="text-2xl font-bold mb-4">Latest Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-card p-4 rounded-lg">
+        <img src="https://placehold.co/400" alt="project-1" class="w-full h-64 object-cover rounded-lg mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Residential Patio</h3>
+        <p class="text-sm text-muted-foreground">View our latest residential patio project completed with precision and style.</p>
+      </div>
+      <div class="bg-card p-4 rounded-lg">
+        <img src="https://placehold.co/400" alt="project-2" class="w-full h-64 object-cover rounded-lg mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Commercial Flooring</h3>
+        <p class="text-sm text-muted-foreground">Check out our commercial flooring project showcasing durability and aesthetics.</p>
+      </div>
+      <div class="bg-card p-4 rounded-lg">
+        <img src="https://placehold.co/400" alt="project-3" class="w-full h-64 object-cover rounded-lg mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Industrial Foundations</h3>
+        <p class="text-sm text-muted-foreground">Explore our industrial foundation project highlighting strength and reliability.</p>
+      </div>
+      <div class="bg-card p-4 rounded-lg">
+        <img src="https://placehold.co/400" alt="project-4" class="w-full h-64 object-cover rounded-lg mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Urban Landscaping</h3>
+        <p class="text-sm text-muted-foreground">Discover our urban landscaping project that combines beauty and functionality.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="bg-secondary text-secondary-foreground py-16 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
+      <p class="text-lg mb-8">Contact us today to get a free quote and consultation.</p>
+      <a href="#contact" class="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/80">Contact Us</a>
+    </div>
+  </section>
+  
+  <section id="contact" class="px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+    <div class="max-w-lg mx-auto bg-card p-6 rounded-lg">
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium mb-2">Name</label>
+          <input type="text" id="name" class="w-full p-2 border border-input rounded-lg" placeholder="Your Name" required />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium mb-2">Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-input rounded-lg" placeholder="Your Email" required />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium mb-2">Message</label>
+          <textarea id="message" class="w-full p-2 border border-input rounded-lg" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/80">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer class="bg-primary text-primary-foreground py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2023 BrandName. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+  </body>
+</html>
